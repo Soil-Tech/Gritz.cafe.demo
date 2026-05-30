@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews | Gritz Cafe Las Vegas</title>
+    <meta name="description" content="Read Reviews from local patrons of Gritz Cafe in Las Vegas. See why we are voted the best Southern soul food spot.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Site Header -->
+    <header>
+        <div class="container">
+            <div class="logo-area">
+                <a href="index.html">
+                    <span class="logo-title">Gritz Café</span>
+                    <span class="logo-subtitle">Exquisite Soul Food</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Our Menu</a></li>
+                    <li><a href="track.html">Track Order</a></li>
+                    <li><a href="Reviews.html" style="color: var(--primary);">Reviews</a></li>
+                    <li><a href="find-us.html">Find Us</a></li>
+                    <li>
+                        <a href="#" class="nav-order-btn" id="openCartTrigger">
+                            🛒 Cart <span class="cart-count-badge" id="cartCountBadge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Reviews Section -->
+    <section class="Reviews-section" id="Reviews" style="min-height: 70vh;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">What Our Guests Say</span>
+                <h2 class="section-title">Customer Reviews</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="Reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">The best grits in Las Vegas, hands down! The fried chicken is seasoned to perfection and the sweet potato waffles are light, sweet, and crispy. A local gem!</p>
+                    <h4 class="review-author">Sarah M.</h4>
+                    <span class="review-author-meta">Verified Yelp Reviewer</span>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Warm, family feel and friendly service. It feels like home every time I walk in. Catfish and cornbread are a must. They cook everything with soul!</p>
+                    <h4 class="review-author">Marcus T.</h4>
+                    <span class="review-author-meta">Local Guide, TripAdvisor</span>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Portions are massive and the catfish was cooked beautifully. Light cornmeal crust, moist inside. Definitely worth the weekend wait!</p>
+                    <h4 class="review-author">Linda K.</h4>
+                    <span class="review-author-meta">Google Reviewer</span>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Absolutely incredible Southern food! We tried the smothered pork chops and the shrimp & grits. It was seasoned like grandmother’s cooking. Service is extremely warm.</p>
+                    <h4 class="review-author">David L.</h4>
+                    <span class="review-author-meta">Tourist, Yelp Reviewer</span>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Sweet potato waffles are a absolute game changer. Crisp edges, soft inside, perfectly spiced. Combined with their seasoned chicken wings, it’s brunch heaven!</p>
+                    <h4 class="review-author">Keisha W.</h4>
+                    <span class="review-author-meta">Local Patron, Google</span>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">No-nonsense Southern diner that outputs top-quality soul food. The yams are candied to perfection and the collard greens are clean and delicious. Worth every dollar.</p>
+                    <h4 class="review-author">Robert G.</h4>
+                    <span class="review-author-meta">Food Critic, Yelp</span>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="menu.html" class="hero-cta" style="padding: 12px 36px; font-size: 16px;">Place Your Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Real-Time Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 class="cart-title">
+                🛒 Your Cart
+            </h3>
+            <button class="close-cart-btn" id="closeCartTrigger">&times;</button>
+        </div>
+        <div class="cart-items-wrapper" id="cartItemsWrapper">
+            <!-- Populated dynamically by app.js -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary-line">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <div class="cart-summary-line">
+                <span>Sales Tax (8.375%)</span>
+                <span id="cartTax">$0.00</span>
+            </div>
+            <div class="cart-summary-line" id="cartDeliveryRow" style="display: none;">
+                <span>Delivery Charge</span>
+                <span id="cartDeliveryFee">$0.00</span>
+            </div>
+            <div class="cart-summary-line total">
+                <span>Estimated Total</span>
+                <span id="cartGrandTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="runCheckout()">
+                Proceed to Checkout
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Bottom Mobile Bar -->
+    <div class="sticky-mobile-bar" id="stickyMobileBar">
+        <div class="mobile-cart-summary">
+            <div class="mobile-cart-qty" id="mobileCartQtyVal">0 items</div>
+            <div class="mobile-cart-total" id="mobileCartTotalVal">$0.00</div>
+        </div>
+        <button class="mobile-order-btn" id="mobileCartTrigger">
+            <span>View Order</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Gritz Café Las Vegas. All Rights Reserved.</p>
+            <p style="font-size: 12px; color: var(--text-muted);">Crafted for Hostinger + WooCommerce optimization guidelines.</p>
+            <p style="font-size: 12px; color: var(--text-muted); margin-top: 8px;"><a href="admin.html" style="text-decoration: underline; color: var(--primary);">Staff Login</a></p>
+        </div>
+    </footer>
+
+    <!-- App Logic Script -->
+    <script src="app.js"></script>
+</body>
+</html>

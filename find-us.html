@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Us | Location & Hours | Gritz Cafe Las Vegas</title>
+    <meta name="description" content="Visit Gritz Cafe at 1911 Stella Lake St in Las Vegas, NV. View our operational hours and map. Mon-Sat 7am-3pm.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Site Header -->
+    <header>
+        <div class="container">
+            <div class="logo-area">
+                <a href="index.html">
+                    <span class="logo-title">Gritz Café</span>
+                    <span class="logo-subtitle">Exquisite Soul Food</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Our Menu</a></li>
+                    <li><a href="track.html">Track Order</a></li>
+                    <li><a href="Reviews.html">Reviews</a></li>
+                    <li><a href="find-us.html" style="color: var(--primary);">Find Us</a></li>
+                    <li>
+                        <a href="#" class="nav-order-btn" id="openCartTrigger">
+                            🛒 Cart <span class="cart-count-badge" id="cartCountBadge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Location, Hours & Google Map -->
+    <section class="location-section" id="location" style="min-height: 70vh; display: flex; align-items: center;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">Come Dine With Us</span>
+                <h2 class="section-title">Location & Hours</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="location-grid">
+                <!-- Left Column: Info blocks -->
+                <div class="info-column">
+                    <div class="info-block">
+                        <h3>
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Our Address
+                        </h3>
+                        <p><strong>Gritz Café (Stella Lake Location)</strong></p>
+                        <p>1911 Stella Lake St</p>
+                        <p>Las Vegas, NV 89106</p>
+                        <p style="margin-top: 10px; font-size: 13px;">📞 Call ahead: (702) 255-4748</p>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h3>
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            Hours of Operation
+                        </h3>
+                        <div class="hours-row">
+                            <span>Monday - Saturday</span>
+                            <span>7:00 AM - 3:00 PM</span>
+                        </div>
+                        <div class="hours-row closed">
+                            <span>Sunday</span>
+                            <span>Closed</span>
+                        </div>
+                        <p style="margin-top: 15px; font-size: 13px; color: var(--text-dark-muted); font-style: italic;">
+                            Kitchen closes at 2:45 PM daily. We are closed on major holidays to allow our staff to celebrate with family.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Interactive Map Frame -->
+                <div class="map-column">
+                    <!-- Standard styled Google Map Embed iframe centered on 1911 Stella Lake St, Las Vegas -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d3220.898436069929!2d-115.1764619!3d36.1933095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c3e8de63d41f%3A0xe54e60f08127453!2sGritz%20Caf%C3%A9!5e0!3m2!1sen!2sus!4v1716652517000!5m2!1sen!2sus" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Real-Time Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 class="cart-title">
+                🛒 Your Cart
+            </h3>
+            <button class="close-cart-btn" id="closeCartTrigger">&times;</button>
+        </div>
+        <div class="cart-items-wrapper" id="cartItemsWrapper">
+            <!-- Populated dynamically by app.js -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary-line">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <div class="cart-summary-line">
+                <span>Sales Tax (8.375%)</span>
+                <span id="cartTax">$0.00</span>
+            </div>
+            <div class="cart-summary-line" id="cartDeliveryRow" style="display: none;">
+                <span>Delivery Charge</span>
+                <span id="cartDeliveryFee">$0.00</span>
+            </div>
+            <div class="cart-summary-line total">
+                <span>Estimated Total</span>
+                <span id="cartGrandTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="runCheckout()">
+                Proceed to Checkout
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Bottom Mobile Bar -->
+    <div class="sticky-mobile-bar" id="stickyMobileBar">
+        <div class="mobile-cart-summary">
+            <div class="mobile-cart-qty" id="mobileCartQtyVal">0 items</div>
+            <div class="mobile-cart-total" id="mobileCartTotalVal">$0.00</div>
+        </div>
+        <button class="mobile-order-btn" id="mobileCartTrigger">
+            <span>View Order</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Gritz Café Las Vegas. All Rights Reserved.</p>
+            <p style="font-size: 12px; color: var(--text-muted);">Crafted for Hostinger + WooCommerce optimization guidelines.</p>
+            <p style="font-size: 12px; color: var(--text-muted); margin-top: 8px;"><a href="admin.html" style="text-decoration: underline; color: var(--primary);">Staff Login</a></p>
+        </div>
+    </footer>
+
+    <!-- App Logic Script -->
+    <script src="app.js"></script>
+</body>
+</html>

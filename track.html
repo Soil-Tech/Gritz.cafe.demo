@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order | Gritz Cafe Las Vegas</title>
+    <meta name="description" content="Track your Gritz Cafe pickup or delivery order status in real-time. From Received to Cooking to Ready.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Site Header -->
+    <header>
+        <div class="container">
+            <div class="logo-area">
+                <a href="index.html">
+                    <span class="logo-title">Gritz Café</span>
+                    <span class="logo-subtitle">Exquisite Soul Food</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Our Menu</a></li>
+                    <li><a href="track.html" style="color: var(--primary);">Track Order</a></li>
+                    <li><a href="Reviews.html">Reviews</a></li>
+                    <li><a href="find-us.html">Find Us</a></li>
+                    <li>
+                        <a href="#" class="nav-order-btn" id="openCartTrigger">
+                            🛒 Cart <span class="cart-count-badge" id="cartCountBadge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Order Tracking Section -->
+    <section class="tracking-section" id="tracking" style="min-height: 70vh; display: flex; align-items: center; background-color: var(--dark-bg);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">Real-Time Tracker</span>
+                <h2 class="section-title" style="color: var(--text-white);">Order Status</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="tracking-card">
+                <div class="tracking-header">
+                    <div class="order-number">Order ID: #<span id="displayOrderNumber">1084</span></div>
+                    <div class="order-eta">Estimated Fulfillment: <strong id="trackerEtaVal">Pending Order</strong></div>
+                </div>
+                
+                <!-- Step Indicator -->
+                <div class="tracking-steps">
+                    <div class="progress-line" id="trackerProgressLine" style="width: 0%;"></div>
+                    
+                    <div class="step-node active">
+                        <div class="step-icon-circle">📝</div>
+                        <span class="step-label">Received</span>
+                    </div>
+                    <div class="step-node">
+                        <div class="step-icon-circle">🔥</div>
+                        <span class="step-label">Cooking</span>
+                    </div>
+                    <div class="step-node">
+                        <div class="step-icon-circle">📦</div>
+                        <span class="step-label" id="lastStepLabel">Ready for Pickup</span>
+                    </div>
+                    <div class="step-node">
+                        <div class="step-icon-circle">😋</div>
+                        <span class="step-label">Completed</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delivery Address Display (shown only for delivery orders) -->
+            <div id="deliveryAddressBlock" style="display: none; margin-top: 24px;">
+                <div class="tracking-card" style="padding: 24px 30px; border-left: 4px solid var(--primary);">
+                    <h4 style="color: var(--text-white); font-size: 16px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                        🚗 Delivering To
+                    </h4>
+                    <p id="deliveryAddrLine" style="color: var(--text-muted); font-size: 15px; line-height: 1.6;"></p>
+                    <p id="deliveryPhoneLine" style="color: var(--text-muted); font-size: 14px; margin-top: 8px;"></p>
+                    <p id="deliveryNotesLine" style="color: var(--text-muted); font-size: 13px; font-style: italic; margin-top: 6px; display: none;"></p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="color: var(--text-muted); font-size: 14px;">Need help? Call the restaurant at (702) 255-4748 with your Order ID.</p>
+                <br>
+                <a href="menu.html" class="hero-cta" style="padding: 10px 24px; font-size: 15px; background: transparent; border: 1px solid var(--primary); box-shadow: none;">Order Something Else</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Real-Time Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 class="cart-title">
+                🛒 Your Cart
+            </h3>
+            <button class="close-cart-btn" id="closeCartTrigger">&times;</button>
+        </div>
+        <div class="cart-items-wrapper" id="cartItemsWrapper">
+            <!-- Populated dynamically by app.js -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary-line">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <div class="cart-summary-line">
+                <span>Sales Tax (8.375%)</span>
+                <span id="cartTax">$0.00</span>
+            </div>
+            <div class="cart-summary-line" id="cartDeliveryRow" style="display: none;">
+                <span>Delivery Charge</span>
+                <span id="cartDeliveryFee">$0.00</span>
+            </div>
+            <div class="cart-summary-line total">
+                <span>Estimated Total</span>
+                <span id="cartGrandTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="runCheckout()">
+                Proceed to Checkout
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Bottom Mobile Bar -->
+    <div class="sticky-mobile-bar" id="stickyMobileBar">
+        <div class="mobile-cart-summary">
+            <div class="mobile-cart-qty" id="mobileCartQtyVal">0 items</div>
+            <div class="mobile-cart-total" id="mobileCartTotalVal">$0.00</div>
+        </div>
+        <button class="mobile-order-btn" id="mobileCartTrigger">
+            <span>View Order</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Gritz Café Las Vegas. All Rights Reserved.</p>
+            <p style="font-size: 12px; color: var(--text-muted);">Crafted for Hostinger + WooCommerce optimization guidelines.</p>
+            <p style="font-size: 12px; color: var(--text-muted); margin-top: 8px;"><a href="admin.html" style="text-decoration: underline; color: var(--primary);">Staff Login</a></p>
+        </div>
+    </footer>
+
+    <!-- App Logic Script -->
+    <script src="app.js"></script>
+</body>
+</html>

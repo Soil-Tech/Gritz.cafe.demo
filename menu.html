@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu | Gritz Cafe Las Vegas Online Ordering</title>
+    <meta name="description" content="Browse Gritz Cafe's menu and order Southern favorites like shrimp and grits, chicken wings, sweet potato waffles, and catfish. Custom options available.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Site Header -->
+    <header>
+        <div class="container">
+            <div class="logo-area">
+                <a href="index.html">
+                    <span class="logo-title">Gritz Café</span>
+                    <span class="logo-subtitle">Exquisite Soul Food</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html" style="color: var(--primary);">Our Menu</a></li>
+                    <li><a href="track.html">Track Order</a></li>
+                    <li><a href="Reviews.html">Reviews</a></li>
+                    <li><a href="find-us.html">Find Us</a></li>
+                    <li>
+                        <a href="#" class="nav-order-btn" id="openCartTrigger">
+                            🛒 Cart <span class="cart-count-badge" id="cartCountBadge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Visual Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">Freshly Cooked to Order</span>
+                <h2 class="section-title">Our Southern Menu</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <!-- Category Navigation Tabs -->
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="favorites_bowls">🍳 Gritz Favorites & Bowls</button>
+                <button class="tab-btn" data-category="plates_baskets">🍗 Plates & Baskets</button>
+                <button class="tab-btn" data-category="omelets_sandwiches">🥪 Omelets & Sandwiches</button>
+                <button class="tab-btn" data-category="sides_alacarte">🍟 Sides & Ala Carte</button>
+                <button class="tab-btn" data-category="kids_desserts_drinks">🍰 Kids, Drinks & Sweets</button>
+            </div>
+            
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- Injected dynamically by app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Address Collection Modal -->
+    <div class="address-modal-overlay" id="addressModal">
+        <div class="address-modal-box">
+            <div class="address-modal-header">
+                <h3>🚗 Delivery Address</h3>
+                <button class="close-modal-btn" id="closeAddressModalBtn">&times;</button>
+            </div>
+            <div class="address-modal-body">
+                <p style="font-size:14px; color:var(--text-dark-muted); margin-bottom:4px;">We deliver within 5 miles of <strong>1911 Stella Lake St, Las Vegas, NV.</strong> Please enter your address below.</p>
+                <div class="address-field-group">
+                    <label for="addrStreet">Street Address *</label>
+                    <input type="text" id="addrStreet" placeholder="e.g. 123 Main Street, Apt 4B" autocomplete="street-address">
+                </div>
+                <div class="address-field-row">
+                    <div class="address-field-group">
+                        <label for="addrCity">City *</label>
+                        <input type="text" id="addrCity" placeholder="Las Vegas" autocomplete="address-level2">
+                    </div>
+                    <div class="address-field-group">
+                        <label for="addrZip">ZIP Code *</label>
+                        <input type="text" id="addrZip" placeholder="89101" maxlength="10" autocomplete="postal-code">
+                    </div>
+                </div>
+                <div class="address-field-group">
+                    <label for="addrPhone">Phone Number *</label>
+                    <input type="tel" id="addrPhone" placeholder="(702) 555-0100" autocomplete="tel">
+                </div>
+                <div class="address-field-group">
+                    <label for="addrNotes">Delivery Notes (Optional)</label>
+                    <textarea id="addrNotes" rows="2" placeholder="Gate code, buzzer number, leave at door, etc."></textarea>
+                </div>
+            </div>
+            <div class="address-modal-footer">
+                <button class="address-cancel-btn" id="cancelAddressBtn">Cancel</button>
+                <button class="address-confirm-btn" id="confirmAddressBtn">
+                    Confirm & Place Order →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Customization Modal -->
+    <div class="modal-overlay" id="customizationModal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalItemName">Customize Item</h3>
+                <button class="close-modal-btn" id="closeModalBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Customization selections injected here -->
+                <div id="customizationOptionsContainer"></div>
+            </div>
+            <div class="modal-footer">
+                <div class="quantity-controller">
+                    <button class="qty-btn" onclick="adjustModalQuantity(-1)">-</button>
+                    <span class="qty-val" id="modalQty">1</span>
+                    <button class="qty-btn" onclick="adjustModalQuantity(1)">+</button>
+                </div>
+                <button class="add-modal-submit-btn" onclick="submitCustomizations()">Add to Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Real-Time Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 class="cart-title">
+                🛒 Your Cart
+            </h3>
+            <button class="close-cart-btn" id="closeCartTrigger">&times;</button>
+        </div>
+        <div class="cart-items-wrapper" id="cartItemsWrapper">
+            <!-- Populated dynamically by app.js -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary-line">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <div class="cart-summary-line">
+                <span>Sales Tax (8.375%)</span>
+                <span id="cartTax">$0.00</span>
+            </div>
+            <div class="cart-summary-line" id="cartDeliveryRow" style="display: none;">
+                <span>Delivery Charge</span>
+                <span id="cartDeliveryFee">$0.00</span>
+            </div>
+            <div class="cart-summary-line total">
+                <span>Estimated Total</span>
+                <span id="cartGrandTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="runCheckout()">
+                Proceed to Checkout
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Bottom Mobile Bar -->
+    <div class="sticky-mobile-bar" id="stickyMobileBar">
+        <div class="mobile-cart-summary">
+            <div class="mobile-cart-qty" id="mobileCartQtyVal">0 items</div>
+            <div class="mobile-cart-total" id="mobileCartTotalVal">$0.00</div>
+        </div>
+        <button class="mobile-order-btn" id="mobileCartTrigger">
+            <span>View Order</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Gritz Café Las Vegas. All Rights Reserved.</p>
+            <p style="font-size: 12px; color: var(--text-muted);">Crafted for Hostinger + WooCommerce optimization guidelines.</p>
+            <p style="font-size: 12px; color: var(--text-muted); margin-top: 8px;"><a href="admin.html" style="text-decoration: underline; color: var(--primary);">Staff Login</a></p>
+        </div>
+    </footer>
+
+    <!-- App Logic Script -->
+    <script src="app.js"></script>
+</body>
+</html>

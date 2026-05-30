@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gritz Cafe | Las Vegas Online Ordering - Southern Soul Food</title>
+    <meta name="description" content="Order Las Vegas' best Southern soul food online from Gritz Cafe. Pickup & delivery options for creamy signature grits, crispy chicken wings, sweet potato waffles, and golden catfish.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Site Header -->
+    <header>
+        <div class="container">
+            <div class="logo-area">
+                <a href="index.html">
+                    <span class="logo-title">Gritz Café</span>
+                    <span class="logo-subtitle">Exquisite Soul Food</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" style="color: var(--primary);">Home</a></li>
+                    <li><a href="menu.html">Our Menu</a></li>
+                    <li><a href="track.html">Track Order</a></li>
+                    <li><a href="Reviews.html">Reviews</a></li>
+                    <li><a href="find-us.html">Find Us</a></li>
+                    <li>
+                        <a href="#" class="nav-order-btn" id="openCartTrigger">
+                            🛒 Cart <span class="cart-count-badge" id="cartCountBadge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Homepage Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h3 class="hero-subtitle">Las Vegas' Premier Soul Food Spot</h3>
+                <h1 class="hero-title">Warm, Comforting & <span>Cooked with Love</span></h1>
+                <p class="hero-description">Experience authentic Southern breakfast, crispy fried catfish, and our world-famous signature creamy grits, prepared fresh and delivered hot.</p>
+                
+                <!-- Pickup / Delivery Toggle (Domino's Style) -->
+                <div class="toggle-container">
+                    <button class="toggle-btn active" id="pickupToggle">
+                        🛍️ Pickup
+                    </button>
+                    <button class="toggle-btn" id="deliveryToggle">
+                        🚗 Delivery
+                    </button>
+                </div>
+                
+                <br>
+                <div class="toggle-info" id="fulfillmentDetailsText">
+                    📍 <strong>Pickup Info:</strong> Ready in 15-20 mins at 1911 Stella Lake St, Las Vegas, NV.
+                </div>
+                
+                <div>
+                    <a href="menu.html" class="hero-cta">
+                        View Menu & Order
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vegas Favorites Teaser Section -->
+    <section class="menu-section" style="padding: 80px 0; background-color: var(--light-card);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">Voted Best Soul Food in Las Vegas</span>
+                <h2 class="section-title">Vegas Strip Favorites</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="menu-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                <div class="menu-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=400" alt="Chicken & Waffles">
+                        <span class="item-badge">Bestseller</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="item-title-price">
+                            <h3 class="item-name">Big Gritz Breakfast</h3>
+                            <span class="item-price">$23.98</span>
+                        </div>
+                        <p class="item-desc">Four whole wings or catfish fillets, two eggs prepared your way, signature buttery grits, and a fresh golden waffle.</p>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=400" alt="Chicken Waffles Combo">
+                        <span class="item-badge">Popular</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="item-title-price">
+                            <h3 class="item-name">Three Crispy Fried Chicken & Waffle</h3>
+                            <span class="item-price">$19.98</span>
+                        </div>
+                        <p class="item-desc">Three crispy fried whole chicken wings served with a hot waffle and your choice of grits, homestyle potatoes, or two eggs.</p>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&q=80&w=400" alt="Catfish and Waffle">
+                        <span class="item-badge">Signature</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="item-title-price">
+                            <h3 class="item-name">Three Golden Fried Catfish & Waffle</h3>
+                            <span class="item-price">$19.98</span>
+                        </div>
+                        <p class="item-desc">Three golden cornmeal-crusted catfish fillets served with a hot waffle and choice of grits, homestyle potatoes, or two eggs.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="menu.html" class="hero-cta" style="padding: 12px 30px; font-size: 16px;">Browse Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Banner Grid (Reviews & Hours Teaser) -->
+    <section class="Reviews-section" style="background-color: var(--light-bg); border-top: 1px solid var(--light-border);">
+        <div class="container">
+            <div class="location-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+                <div class="info-block" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                    <div>
+                        <h3 style="border: none; padding: 0; margin-bottom: 20px;">Southern Hospitality</h3>
+                        <p style="font-family: var(--font-serif); font-style: italic; font-size: 16px; margin-bottom: 20px;">"Warm, family feel and friendly service. It feels like home every time I walk in. Catfish and cornbread are a must."</p>
+                    </div>
+                    <a href="Reviews.html" style="color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 5px;">Read Reviews <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></a>
+                </div>
+                
+                <div class="info-block" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                    <div>
+                        <h3 style="border: none; padding: 0; margin-bottom: 20px;">Hours & Location</h3>
+                        <p>📍 1911 Stella Lake St, Las Vegas, NV 89106</p>
+                        <p style="margin-top: 10px;">📅 Monday – Saturday: 7:00 AM – 3:00 PM</p>
+                        <p style="color: var(--accent-red); font-weight: 500;">📅 Sunday: Closed</p>
+                    </div>
+                    <a href="find-us.html" style="color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 5px; margin-top: 20px;">Get Directions <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Real-Time Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 class="cart-title">
+                🛒 Your Cart
+            </h3>
+            <button class="close-cart-btn" id="closeCartTrigger">&times;</button>
+        </div>
+        <div class="cart-items-wrapper" id="cartItemsWrapper">
+            <!-- Populated dynamically by app.js -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary-line">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <div class="cart-summary-line">
+                <span>Sales Tax (8.375%)</span>
+                <span id="cartTax">$0.00</span>
+            </div>
+            <div class="cart-summary-line" id="cartDeliveryRow" style="display: none;">
+                <span>Delivery Charge</span>
+                <span id="cartDeliveryFee">$0.00</span>
+            </div>
+            <div class="cart-summary-line total">
+                <span>Estimated Total</span>
+                <span id="cartGrandTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="runCheckout()">
+                Proceed to Checkout
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Bottom Mobile Bar -->
+    <div class="sticky-mobile-bar" id="stickyMobileBar">
+        <div class="mobile-cart-summary">
+            <div class="mobile-cart-qty" id="mobileCartQtyVal">0 items</div>
+            <div class="mobile-cart-total" id="mobileCartTotalVal">$0.00</div>
+        </div>
+        <button class="mobile-order-btn" id="mobileCartTrigger">
+            <span>View Order</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Gritz Café Las Vegas. All Rights Reserved.</p>
+            <p style="font-size: 12px; color: var(--text-muted);">Crafted for Hostinger + WooCommerce optimization guidelines.</p>
+            <p style="font-size: 12px; color: var(--text-muted); margin-top: 8px;"><a href="admin.html" style="text-decoration: underline; color: var(--primary);">Staff Login</a></p>
+        </div>
+    </footer>
+
+    <!-- App Logic Script -->
+    <script src="app.js"></script>
+</body>
+</html>

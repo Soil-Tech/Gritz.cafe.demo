@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Gritz Cafe</title>
+    <meta name="description" content="Gritz Cafe internal order management dashboard for staff.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+
+    <!-- PIN Lock Overlay -->
+    <div class="admin-lock-overlay" id="adminLockOverlay">
+        <div class="admin-lock-box">
+            <div class="admin-lock-icon">🔒</div>
+            <h2>Admin Access</h2>
+            <p style="color: var(--text-muted); margin-bottom: 24px;">Enter your 4-digit PIN to access the dashboard.</p>
+            <input type="password" id="adminPinInput" class="admin-pin-field" maxlength="4" placeholder="• • • •" autocomplete="off" inputmode="numeric">
+            <p id="adminPinError" style="color: var(--accent-red); font-size: 13px; margin-top: 8px; display: none;">Incorrect PIN. Please try again.</p>
+            <button class="admin-unlock-btn" id="adminUnlockBtn">Unlock Dashboard →</button>
+            <p style="color: var(--text-muted); font-size: 12px; margin-top: 16px; opacity: 0.6;">Demo PIN: <strong>1234</strong></p>
+        </div>
+    </div>
+
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="container">
+            <div class="logo-area">
+                <a href="index.html">
+                    <span class="logo-title">Gritz Café</span>
+                    <span class="logo-subtitle" style="color: var(--primary);">Admin Dashboard</span>
+                </a>
+            </div>
+            <div class="admin-header-right">
+                <span class="admin-live-dot" id="adminLiveDot">● LIVE</span>
+                <a href="menu.html" class="admin-nav-link">View Menu</a>
+                <button class="admin-logout-btn" id="adminLogoutBtn">🔒 Lock</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <section class="admin-stats-section">
+        <div class="container">
+            <div class="admin-stats-grid">
+                <div class="admin-stat-card stat-received">
+                    <div class="admin-stat-number" id="statPending">0</div>
+                    <div class="admin-stat-label">📋 New Orders</div>
+                </div>
+                <div class="admin-stat-card stat-cooking">
+                    <div class="admin-stat-number" id="statCooking">0</div>
+                    <div class="admin-stat-label">🔥 Cooking</div>
+                </div>
+                <div class="admin-stat-card stat-ready">
+                    <div class="admin-stat-number" id="statReady">0</div>
+                    <div class="admin-stat-label">📦 Ready / Out</div>
+                </div>
+                <div class="admin-stat-card stat-done">
+                    <div class="admin-stat-number" id="statCompleted">0</div>
+                    <div class="admin-stat-label">✅ Completed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Tabs & Orders -->
+    <section class="admin-orders-section">
+        <div class="container">
+            <div class="admin-toolbar">
+                <div class="admin-filter-tabs">
+                    <button class="admin-tab active" data-filter="all">All</button>
+                    <button class="admin-tab" data-filter="received">📋 New</button>
+                    <button class="admin-tab" data-filter="cooking">🔥 Cooking</button>
+                    <button class="admin-tab" data-filter="ready">📦 Ready</button>
+                    <button class="admin-tab" data-filter="completed">✅ Done</button>
+                </div>
+                <button class="admin-clear-btn" id="clearCompletedBtn">🗑️ Clear Completed</button>
+            </div>
+
+            <div class="admin-orders-grid" id="adminOrdersGrid">
+                <!-- Populated dynamically by app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 30px 0 30px;">
+        <div class="container">
+            <p>&copy; 2026 Gritz Café Las Vegas. Admin Panel — Internal Use Only.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
