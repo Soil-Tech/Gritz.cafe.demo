@@ -540,7 +540,7 @@ const MENU_DATA = {
             price: 6.98,
             desc: 'Spiced sweet potato filling in a flaky pie crust, topped with whipped cream.',
             badge: 'Desserts',
-            image: '/images/Sweet Potato Pie.jpg',
+            image: '/images/Sweet Potato Pie.png',
             options: []
         },
         {
