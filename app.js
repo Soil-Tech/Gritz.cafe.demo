@@ -12,7 +12,7 @@ const MENU_DATA = {
             price: 19.98,
             desc: 'Three crispy fried whole chicken wings served with a hot waffle and choice of grits, homestyle potatoes, or two eggs.',
             badge: 'Bestseller',
-            image: '/images/A. Three Crispy Fried Chicken Waffle.jpg',
+            image: 'http://127.0.0.1:5500/images/A.%20Three%20Crispy%20Fried%20Chicken%20Waffle.jpg',
             options: ['favorites_sides']
         },
         {
