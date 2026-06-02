@@ -503,7 +503,7 @@ const MENU_DATA = {
             price: 8.98,
             desc: 'Mini waffle with choice of one wing or one catfish fillet. Small juice box or soft drink included.',
             badge: 'Kids Meal',
-            image: '/Waffle Wing or Catfish.jpg',
+            image: '/kids1.jpg',
             options: ['kids_meat_choice']
         },
         {
