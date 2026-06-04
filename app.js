@@ -21,7 +21,7 @@ const MENU_DATA = {
             price: 19.98,
             desc: 'Three golden cornmeal-crusted catfish fillets served with a hot waffle and choice of grits, homestyle potatoes, or two eggs.',
             badge: 'Popular',
-            image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=400',
+            image: 'https://popmenucloud.com/cdn-cgi/image/width=1200,height=630,format=auto,fit=cover/psjuwdhb/6db320d4-c3ae-4f51-8aac-9cf24ef95a10.JPG',
             options: ['favorites_sides']
         },
         {
@@ -30,7 +30,7 @@ const MENU_DATA = {
             price: 18.98,
             desc: 'Two warm split buttermilk biscuits topped with country sausage gravy, served with two eggs and grits or homestyle potatoes.',
             badge: 'Southern Comfort',
-            image: '/images/A. Biscuits Gravy Platter.jpg',
+            image: 'https://www.allrecipes.com/thmb/nMNGkd-8kr1GVDI7rgLUFnsXb0s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-216391-Easy-Sausage-Gravy-Biscuits-hero-4x3-4ea5190f4be74199a4ba2fed3eff3a5b.jpg',
             options: ['favorites_sides']
         },
         {
@@ -39,7 +39,7 @@ const MENU_DATA = {
             price: 21.98,
             desc: 'Customize your main! Choice of: 1 Hotlink, 2 Wings, or 2 Catfish. Served with two sides and one choice of bread.',
             badge: 'Custom Feast',
-            image: '/images/A. Mix and Match Platter.jpg',
+            image: 'https://d1w7312wesee68.cloudfront.net/kWTc236XgImwvdwJmhShfOqC3hq4M8Ia6ioF1wZGaeQ/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-318442000000000000/menu/items/4/item-1600000000819616244_1767980959.jpg',
             options: ['plate_options']
         },
         {
@@ -48,7 +48,7 @@ const MENU_DATA = {
             price: 23.98,
             desc: 'Four whole wings or catfish fillets served with two eggs, signature buttery grits, and a sweet potato waffle.',
             badge: 'Vegas Favorite',
-            image: '/images/A. Big Gritz Breakfast.jpg',
+            image: 'https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/psjuwdhb/9196e7f2-3448-41f7-9b45-5848decdc536.jpg',
             options: ['eggs_choice']
         },
         {
@@ -57,7 +57,7 @@ const MENU_DATA = {
             price: 21.98,
             desc: 'Three whole wings or catfish fillets served with collard greens, sweet candied yams, baked mac & cheese, and cornbread.',
             badge: 'Signature Platter',
-            image: '/images/A. Holy Trinity Feast.jpg',
+            image: 'https://i.ytimg.com/vi/sFjRYGSlx_4/maxresdefault.jpg',
             options: ['meat_choice']
         },
         {
@@ -66,7 +66,7 @@ const MENU_DATA = {
             price: 8.98,
             desc: 'Choose from Sweet Potato (loaded with fresh candied yams), Butter Pecan, or Peach Cobbler.',
             badge: 'Sweet Treat',
-            image: '/images/A. Specialty Waffle Selection.jpg',
+            image: 'https://www.allrecipes.com/thmb/KTsy2GobXKbhLC0inAonbd5Dc6k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6794sweet-potato-pecan-waffleslutzflcat4x3-c98c063ae7454c2f8ffc03e4df0938f8.jpg',
             options: ['waffle_selection']
         },
         // Gritz Bowls
@@ -76,7 +76,7 @@ const MENU_DATA = {
             price: 15.98,
             desc: 'Three pieces of pork or turkey bacon served over a bowl of grits, homestyle potatoes, or mixed vegetables. Customized with toppings and bread.',
             badge: 'Gritz Bowl',
-            image: '/images/A. Gritz Bowl - Crispy Bacon.jpg',
+            image: 'https://ohthatsgood.com/wp-content/uploads/2013/01/savory-grits-1200x1200-1-500x500.jpg',
             options: ['bowl_options']
         },
         {
@@ -85,7 +85,7 @@ const MENU_DATA = {
             price: 15.98,
             desc: 'Two sausage patties (pork or turkey) served over grits, potatoes, or mixed vegetables. Customized with toppings and bread.',
             badge: 'Gritz Bowl',
-            image: '/images/A. Pork or Turkey Sausage.jpg',
+            image: 'https://assets-us-01.kc-usercontent.com/34fc6d30-8315-0071-c94c-880d09675db9/a0ad9710-ccfe-4756-a41a-4b23bdb31dd2/web_selects.jpg?w=1280&auto=format',
             options: ['bowl_options']
         },
         {
@@ -94,7 +94,7 @@ const MENU_DATA = {
             price: 18.98,
             desc: 'Eight pieces of fried or grilled shrimp served over grits, potatoes, or mixed vegetables. Customized with toppings and bread.',
             badge: 'Premium Bowl',
-            image: '/images/A. Sautéed Shrimp.jpg',
+            image: 'https://www.seriouseats.com/thmb/XXRXVPZYAVYS7OVUH8AUZzKnAV4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2015__10__20151002-shrimp-grits-vicky-wasik-19-a88f16ad8ab24fa093595c1b18f0cbff.jpg',
             options: ['bowl_options']
         },
         {
@@ -103,7 +103,7 @@ const MENU_DATA = {
             price: 17.98,
             desc: 'One sliced spicy beef hotlink served over grits, potatoes, or mixed vegetables. Customized with toppings and bread.',
             badge: 'Gritz Bowl',
-            image: '/images/A. Juicy Hotlink.jpg',
+            image: 'https://spicysouthernkitchen.com/wp-content/uploads/2022/02/Grillades-e-500x375.jpg',
             options: ['bowl_options']
         },
         {
@@ -112,7 +112,7 @@ const MENU_DATA = {
             price: 17.98,
             desc: 'Two chicken wings or catfish fillets (fried or grilled) served over grits, potatoes, or mixed vegetables. Customized with toppings and bread.',
             badge: 'Gritz Bowl',
-            image: '/images/A. Wings or Catfish.jpg',
+            image: 'https://media-cldnry.s-nbcnews.com/image/upload/newscms/2022_08/1845068/kevin-mitchell-fried-catfish-mc-2x1-220224.jpg',
             options: ['bowl_options']
         }
     ],
@@ -503,7 +503,7 @@ const MENU_DATA = {
             price: 8.98,
             desc: 'Mini waffle with choice of one wing or one catfish fillet. Small juice box or soft drink included.',
             badge: 'Kids Meal',
-            image: '/kids1.jpg',
+            image: 'https://waffestry.com/wp-content/uploads/2024/07/4-870x525.jpg',
             options: ['kids_meat_choice']
         },
         {
@@ -512,7 +512,7 @@ const MENU_DATA = {
             price: 8.98,
             desc: 'Melty American grilled cheese sandwich with french fries. Small drink included.',
             badge: 'Kids Meal',
-            image: '/images/Kids Grilled Cheese Fries.jpg',
+            image: 'https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/fyrtevol/422c45c5-b5f4-4b70-bd2e-1c0fc3933f43.jpg',
             options: []
         },
         {
@@ -521,7 +521,7 @@ const MENU_DATA = {
             price: 8.98,
             desc: 'Mini waffle served with bacon or sausage. Small drink included.',
             badge: 'Kids Meal',
-            image: '/images/Kids Waffle & Bacon or Sausage.jpg',
+            image: 'https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xODY1NzkyOS9vcmlnaW4ucG5nIiwiZXhwaXJlc19hdCI6MTgwNzI4MDEwMX0.H0QddvzjF8rmt87_4hoECtqSaiddZHDINNYYgurRMmg/img.png?width=980',
             options: ['kids_bacon_sausage_choice']
         },
         {
@@ -530,7 +530,7 @@ const MENU_DATA = {
             price: 8.98,
             desc: 'Two crispy hand-breaded chicken fingers served with fries. Small drink included.',
             badge: 'Kids Meal',
-            image: '/images/Chicken Fingers Fries Two crispy.jpg',
+            image: 'https://www.shutterstock.com/image-photo/deep-fried-chicken-strips-sticks-600nw-2604083267.jpg',
             options: []
         },
         // Desserts
@@ -540,7 +540,7 @@ const MENU_DATA = {
             price: 6.98,
             desc: 'Spiced sweet potato filling in a flaky pie crust, topped with whipped cream.',
             badge: 'Desserts',
-            image: '/images/Sweet Potato Pie.png',
+            image: 'https://www.modernhoney.com/wp-content/uploads/2023/11/Sweet-Potato-Pie-5-scaled.jpg',
             options: []
         },
         {
@@ -549,7 +549,7 @@ const MENU_DATA = {
             price: 6.98,
             desc: 'Warm, sweet peaches baked with a buttery pie crust crust. Dusted with cinnamon.',
             badge: 'Desserts',
-            image: '/images/Buttery Peach Cobbler.jpg',
+            image: 'https://www.allrecipes.com/thmb/nQ1HumhmRHhcsywZJwmvD8l85Vg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/19897-old-fashioned-peach-cobbler-VAT-4x3-7655b94b8cea47a8bee1a1adc5d42ef3.jpg',
             options: []
         },
         {
@@ -558,7 +558,7 @@ const MENU_DATA = {
             price: 4.98,
             desc: 'Moist yellow lemon cake slice with a sweet glazed frosting.',
             badge: 'Desserts',
-            image: '/images/Lemon Cake Slice.jpg',
+            image: 'https://thumbs.dreamstime.com/b/slice-layered-lemon-cake-yellow-glaze-cream-filling-served-plate-whole-lemons-fresh-citrus-dessert-sweet-frosting-427448500.jpg',
             options: []
         },
         // Beverages
@@ -568,7 +568,7 @@ const MENU_DATA = {
             price: 4.98,
             desc: 'Choice of Coke, Diet Coke, Sprite, Lemonade, Strawberry Fanta, Sweet Tea, Muddy Water, Hot Tea, or Coffee. Free refills.',
             badge: 'Beverages',
-            image: '/images/Fountain Drink Sweet Tea or Coffee.jpg',
+            image: 'https://www.everydaypeoplecoffeeandtea.com/cdn/shop/files/Untitled_design_70.jpg?v=1757112471&width=480',
             options: ['fountain_selection']
         },
         {
@@ -577,7 +577,7 @@ const MENU_DATA = {
             price: 4.98,
             desc: 'Premium fruit juice or milk (Apple, Orange, Grape, Cranberry, Grapefruit). Large size, no refills.',
             badge: 'Juice Bar',
-            image: '/images/Fruit Juice or Cold Milk.jpg',
+            image: 'https://m.media-amazon.com/images/I/71bTXkppP3L._AC_UF1000,1000_QL80_.jpg',
             options: ['juice_selection']
         },
         {
@@ -586,7 +586,7 @@ const MENU_DATA = {
             price: 4.98,
             desc: 'Creamy hot chocolate with marshmallows, or sweet freshly brewed strawberry lemonade. No refills.',
             badge: 'Specialty Drinks',
-            image: '/images/Hot Chocolate or Strawberry.jpg',
+            image: 'https://www.hersheyland.com/content/dam/hersheyland/en-us/recipes/recipe-images/1007-strawberry-hot-chocolate-hero.webp',
             options: ['specialty_drink_selection']
         }
     ]
