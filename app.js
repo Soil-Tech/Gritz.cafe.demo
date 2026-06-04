@@ -12,7 +12,7 @@ const MENU_DATA = {
             price: 19.98,
             desc: 'Three crispy fried whole chicken wings served with a hot waffle and choice of grits, homestyle potatoes, or two eggs.',
             badge: 'Bestseller',
-            image: 'blob:https://web.whatsapp.com/de7fb268-54d8-4a43-83f8-fce273271fa3',
+            image: 'https://crisco.com/recipes/nashville-style-fried-chicken-and-waffles/',
             options: ['favorites_sides']
         },
         {
