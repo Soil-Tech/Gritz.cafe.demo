@@ -12,7 +12,7 @@ const MENU_DATA = {
             price: 19.98,
             desc: 'Three crispy fried whole chicken wings served with a hot waffle and choice of grits, homestyle potatoes, or two eggs.',
             badge: 'Bestseller',
-            image: 'http://127.0.0.1:5500/images/A.%20Three%20Crispy%20Fried%20Chicken%20Waffle.jpg',
+            image: 'blob:https://web.whatsapp.com/de7fb268-54d8-4a43-83f8-fce273271fa3',
             options: ['favorites_sides']
         },
         {
@@ -21,7 +21,7 @@ const MENU_DATA = {
             price: 19.98,
             desc: 'Three golden cornmeal-crusted catfish fillets served with a hot waffle and choice of grits, homestyle potatoes, or two eggs.',
             badge: 'Popular',
-            image: '/images/A.Three Golden Fried Catfish Waffle.jpg',
+            image: 'https://web.whatsapp.com/de7fb268-54d8-4a43-83f8-fce273271fa3',
             options: ['favorites_sides']
         },
         {
